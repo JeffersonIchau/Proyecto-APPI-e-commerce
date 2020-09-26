@@ -36,14 +36,6 @@
                 <div class="float-md-left mb-4"><h2 class="text-black h5">Productos Disponibles</h2></div>
                 <div class="d-flex">
                   <div class="dropdown mr-1 ml-md-auto">
-                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Sugerencias
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                      <a class="dropdown-item" href="#">Laptops</a>
-                      <a class="dropdown-item" href="#">PC's</a>
-                      <a class="dropdown-item" href="#">Componentes</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -51,12 +43,6 @@
             <div class="row mb-5">
               <?php
                 include('./php/conexion.php');
-                /*for($i=0;$i<50;$i++){
-                  $conexion->query("insert into productos (nombre,descripcion,precio,imagen,
-                                    inventario, id_categoria,talla,color) values(
-                                      'Producto $i','Esta es la descripcion',".rand(10,100).",'asusrogzephyrus.jpg',".rand(1,100).",1,'35 pulgadas','Negro'
-                                    )")or die($conexion->error);
-                }*/
                 $limite = 10;//productos por pagina
                 $totalQuery = $conexion->query('select count(*) from productos')or die($conexion->error);
                 $totalProductos = mysqli_fetch_array($totalQuery);
@@ -124,58 +110,9 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="site-section site-blocks-2">
-                <div class="row justify-content-center text-center mb-5">
-                  <div class="col-md-7 site-section-heading pt-4">
-                    <h2>Categorias</h2>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
-                    <a class="block-2-item" href="#">
-                      <figure class="image">
-                        <img src="images/asusrogzephyrus.jpg" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <span class="text-uppercase">Las Mejores</span>
-                        <h3>Laptops</h3>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="">
-                    <a class="block-2-item" href="#">
-                      <figure class="image">
-                        <img src="images/asusrogstrixmonitor35.jpg" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <span class="text-uppercase">Los mejores</span>
-                        <h3>PC's</h3>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="">
-                    <a class="block-2-item" href="#">
-                      <figure class="image">
-                        <img src="images/MSIRTX207Super" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <span class="text-uppercase">Los mejores</span>
-                        <h3>Componentes</h3>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        
+
       </div>
     </div>
-
-
     
   </div>
 

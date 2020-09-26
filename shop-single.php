@@ -49,18 +49,11 @@
             <p><strong class="text-primary h4">$ <?php echo $fila[3]; ?></strong></p>
             
             <div class="mb-5">
-              <div class="input-group mb-3" style="max-width: 120px;">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-              </div>
-              <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              <div class="input-group-append">
-                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-              </div>
-            </div>
 
             </div>
             <p><a href="cart.php?id=<?php echo $fila[0];?>" class="buy-now btn btn-sm btn-primary">Agregar al Carrito</a></p>
+            </div>
+           
 
           </div>
         </div>

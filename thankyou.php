@@ -13,12 +13,14 @@
       $password = $_POST['c_account_password'];
     }
   }
-  $conexion->query("insert into usuario (nombre,telefono,email,password) 
+  $conexion->query("insert into usuario (nombre,telefono,email,password,img_perfil,nivel) 
   values(
       '".$_POST['c_fname']." ".$_POST['c_lname']."',
       '".$_POST['c_phone']."',
       '".$_POST['c_email_address']."',
-      '".sha1($password)."'
+      '".sha1($password)."',
+      'default.jpg',
+      'cliente'
         ) 
   ")or die($conexion->error);
   $id_usuario = $conexion->insert_id;
@@ -80,16 +82,13 @@ unset($_SESSION['carrito']);
         <div class="row">
           <div class="col-md-12 text-center">
             <span class="icon-check_circle display-3 text-success"></span>
-            <h2 class="display-3 text-black">Thank you!</h2>
-            <p class="lead mb-5">You order was successfuly completed.</p>
-            <p><a href="shop.html" class="btn btn-sm btn-primary">Back to shop</a></p>
+            <h2 class="display-3 text-black">Gracias por su compra</h2>
+            <p class="lead mb-5">Su orden se ha procesado correctamente</p>
+            <p><a href="index.php" class="btn btn-sm btn-primary">Volver a Inicio</a></p>
           </div>
         </div>
       </div>
     </div>
-
-    <?php include("./layouts/footer.php"); ?> 
-
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
