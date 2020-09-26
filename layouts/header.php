@@ -53,9 +53,6 @@
               <a href="about.php">Acerca de Nosotros</a>
             
             </li>
-          
-            <li><a href="#">Catalogo</a></li>
-            <li><a href="#">Nuevos Productos</a></li>
             <li><a href="contact.php">Contacto</a></li>
           </ul>
         </div>

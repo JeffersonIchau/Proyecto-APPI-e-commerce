@@ -46,21 +46,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Recordar mi contraseña
-              </label>
-            </div>
-          </div>
           <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
           </div>
-          <!-- /.col -->
-          <br>
-          </br>
           <?php
            if(isset($_GET['error'])){
              echo '<div class ="col-12 alert alert-danger">'.$_GET['error'].'</div>';
@@ -71,7 +60,7 @@
 
       <!-- /.social-auth-links -->
       <p class="mb-0">
-        <a href="register.html" class="text-center">Registrarse</a>
+        <a href="registrarse.php" class="text-center">Registrar Cliente</a>
       </p>
     </div>
     <!-- /.login-card-body -->
